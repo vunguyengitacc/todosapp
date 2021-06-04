@@ -1,13 +1,180 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(149, 95, 199);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todoApp {
+  width: 40vw;
+  min-height: 60vh;
+  background-color: rgb(233, 112, 32);
+  box-shadow: rgba(218, 109, 7) .2rem .5rem .5rem .15rem;
+  position: relative;
+  margin-left: 30vw;
+  margin-top: 15vh;
+  border-radius: 1vw;
+}
+
+@media only screen and (max-width: 1050px) {
+  .todoApp {
+    width: 60vw;
+    margin-left: 20vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .todoApp {
+    width: 100vw;
+    margin-left: 0vw;
+  }
+  .todoApp>input[type="text"] {
+    width: 80%!important;
+    margin-left: 7.5%!important;
+  }
+  .todoApp>button {
+    margin-top: 3.5vh;
+    width: 85%!important;
+    margin-left: 7.5%!important;
+  }
+}
+
+.todoApp>h1 {
+  text-align: center;
+}
+
+.todoApp>input[type="text"] {
+  padding-left: 5%;
+  border: none;
+  background-color: rgb(228, 225, 225);
+  width: 65%;
+  height: 7.5vh;
+  border-radius: 1vw;
+  font-size: 1.3rem;
+  margin-left: 5%;
+}
+
+.todoApp>button {
+  width: 15%;
+  margin-left: 5%;
+  height: 7.5vh;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  background-color: rgb(186, 226, 43);
+  border-radius: 1vw;
+  cursor: pointer;
+}
+
+.todoApp>input[type="text"]:focus {
+  border: none;
+  outline: none;
+}
+
+.todoList {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.item {
+  width: 95%;
+  height: 100%;
+  margin-bottom: 5vh;
+  margin-left: 2.5%;
+  opacity: .5;
+  border-radius: 1vw;
+  box-shadow: rgb(184, 127, 22) .2rem .2rem;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.waiting {
+  background-color: rgb(251, 255, 0);
+}
+
+.completed {
+  background-color: orange;
+}
+
+.completed>button {
+  display: none;
+}
+
+.item>p {
+  width: 80%;
+  padding-left: 5%;
+}
+
+.item>button {
+  width: 15%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.destroy {
+  border-radius: 1vw 0 0 1vw;
+  cursor: pointer;
+}
+
+.destroy:hover {
+  background-color: red;
+}
+
+.complete {
+  border-radius: 0 1vw 1vw 0;
+  cursor: pointer;
+}
+
+.complete:hover {
+  background-color: rgb(33, 190, 54);
+}
+
+.footerList {
+  height: 15vh;
+}
+
+.footer {
+  margin-left: 5%;
+  width: 90%;
+  height: 12vh;
+  position: absolute;
+  border-radius: 0 0 1vw 1vw;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer>button {
+  width: 33%;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  margin-bottom: 2%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btnDeleteFooter {
+  border-radius: 1vw 0 0 1vw;
+}
+
+.btnDeleteFooter:hover {
+  background-color: red;
+}
+
+.btnDeleteWaitingFooter:hover {
+  background-color: yellow;
+}
+
+.btnCompleteFooter {
+  border-radius: 0 1vw 1vw 0;
+}
+
+.btnCompleteFooter:hover {
+  background-color: rgb(33, 190, 54);
 }
